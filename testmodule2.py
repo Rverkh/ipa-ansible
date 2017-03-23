@@ -2,7 +2,6 @@
 
 
 from ansible.plugins.action import ActionBase
-import pprint
 
 
 #from importlib.machinery import SourceFileLoader
@@ -10,14 +9,12 @@ import pprint
 #foo = SourceFileLoader("ipahttp", "/root/ipahttp1.py").load_module()
 import imp
 foo = imp.load_source('ipahttp', '/root/ipahttp1.py')
-import platform
 
 
 
 class ActionModule(ActionBase):
 
 	def run(self, tmp=None, task_vars=None):
-		print(platform.python_version())
 		if task_vars is None:
 			task_vars = dict()
 		result = super(ActionModule, self).run(tmp, task_vars)
