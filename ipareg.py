@@ -74,7 +74,7 @@ def main():
 
 
 
-	
+	changed=True	
 	module.exit_json(changed=changed, msg="All action complete")
 
 
