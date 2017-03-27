@@ -480,7 +480,8 @@ class ipa(object):
                 'idnssoaexpire': idnssoaexpire,
                 'idnssoaminimum': idnssoaminimum,
                 'skip_overlap_check': skip_overlap_check,
-                'skip_nameserver_check': skip_nameserver_check
+                'skip_nameserver_check': skip_nameserver_check,
+		'idnsallowdynupdate': True
             }
         }
         results = self.makeReq(m)
